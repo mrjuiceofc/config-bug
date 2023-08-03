@@ -112,7 +112,7 @@ participant: "0@s.whatsapp.net", ...(from ? { remoteJid: "" } : {})
         'isAnimated': []
 }}}
 const reply = (teks) => {
-return haikal.sendMessage(from, { text: teks, contextInfo:{"externalAdReply": {"title": `DEVELOPER ${botname}`,"body": `Selamat ${salam} kak ${pushname}`, "previewType": "PHOTO","thumbnailUrl": 'https://graph.org/file/7ae989fff8dbda5fd37d5.jpg',"thumbnail": thumb,"sourceUrl": `https://www.youtube.com/@mrjuiceofc`}}}, { quoted:m})} 
+return haikal.sendMessage(from, { text: teks, contextInfo:{"externalAdReply": {"title": `DEVELOPER ${botname}`,"body": `Selamat ${salam} kak ${pushname}`, "previewType": "PHOTO","thumbnailUrl": 'https://telegra.ph/file/7b3c0ac03dab420c5c12b.jpg',"thumbnail": thumb,"sourceUrl": `https://youtube.com/c/HwModsWa857`}}}, { quoted:m})} 
 
 function pickRandom(list) {
 return list[Math.floor(Math.random() * list.length)]
@@ -125,7 +125,7 @@ var hawemod = [
 "《 ███████▒▒▒▒▒》50%",
 "《 ██████████▒▒》80%",
 "《 ████████████》100%",
-"~_*Mr Juice OFC*_~\n𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳..."
+"~_*©辛Faallz OFFC*_~\n𝙻𝙾𝙰𝙳𝙸𝙽𝙶 𝙲𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳..."
 ]
 let { key } = await haikal.sendMessage(from, {text: 'ʟᴏᴀᴅɪɴɢ...'})//Pengalih isu
 
@@ -210,7 +210,7 @@ async function sendGeekzMessage(chatId, message, options = {}){
 
 const sendapk = (teks) => {
 haikal.sendMessage(from, { document: teks, mimetype: 'application/vnd.android.package-archive'}, {quoted:m})
-m.reply('*Rusak Bodoh !! Yang Bener Contoh : Yoapk MR JUICE OFC*')
+m.reply('*Rusak Bodoh !! Yang Bener Contoh : Yoapk HW MODS WA MODS WA*')
 }
 for (let ikalii of apknye) {
 if (budy === ikalii) {
@@ -221,7 +221,7 @@ sendapk(buffer)
 //=================================================//
 const sendzip = (teks) => {
 haikal.sendMessage(from, { document: teks, mimetype: 'application/zip'}, {quoted:m})
-m.reply('*Rusak Bodoh !! Yang Bener Contoh : Yozip MR JUICE OFC*')
+m.reply('*Rusak Bodoh !! Yang Bener Contoh : Yozip HW MODS WA MODS WA*')
 }
 for (let ikali of zipnye) {
 if (budy === ikali) {
@@ -232,7 +232,7 @@ sendzip(buffer)
 //=================================================//
 const senddocu = (teks) => {
 haikal.sendMessage(from, { document: teks, mimetype: 'application/pdf'}, {quoted:m})
-m.reply('*Rusak Bodoh !! Yang Bener Contoh : Yopdf MR JUICE OFC*')
+m.reply('*Rusak Bodoh !! Yang Bener Contoh : Yopdf HW MODS WA MODS WA*')
 }
 for (let ikal of docunye) {
 if (budy === ikal) {
@@ -304,18 +304,18 @@ switch(command) {
 
 case 'menu':{
 await loading()
-m.reply(`*Hy ${pushname} 👋 🐦 ${salam}
-Total Premium :  ${owner.length}
+m.reply(`*Hay Kak ${pushname} 👋 Selamat ${salam}
+Total Pengguna Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-*TO GIVE ACCESS*
-🔏 addprem (263××)
-🔏 delprem (263××)
+*UNTUK MEMBERIKAN AKSES*
+🔏 addprem (628xx)
+🔏 delprem (628xx)
 🔏 listprem
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-*BLOCK USER ACCESS*
-🔏 pengguna add (263××)
-🔏 pengguna del (263××)
+*BLOCKIR PENGGUNA AKSES*
+🔏 pengguna add (628xx)
+🔏 pengguna del (628xx)
 🔏 listban
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 *FITUR MENU*
@@ -343,45 +343,45 @@ await loading()
 m.reply(`Hay Kak ${pushname} 👋 Selamat ${salam}
 Total Pengguna Premium :  ${owner.length}
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-*TO GIVE ACCESS*
-🔏 addprem (263××)
-🔏 delprem (263××)
+*UNTUK MEMBERIKAN AKSES*
+🔏 addprem (628xx)
+🔏 delprem (628xx)
 🔏 listprem
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-*BLOCK USER ACCESS*
-🔏 pengguna add (263××)
-🔏 pengguna del (263××)
+*BLOCKIR PENGGUNA AKSES*
+🔏 pengguna add (628xx)
+🔏 pengguna del (628xx)
 🔏 listban
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-*SEND IT PRIVATELY*
+*KIRIM KE PRIBADI*
 ┏━━⊱
-┣❏🌷 (263××xx)
-┣❏🐲 (263××xx)
-┣❏🐉 (263××xx)
-┣❏🌵 (263××xx)
-┣❏🎄 (263××xx) 
-┣❏🌲 (263××xx)
-┣❏🌳 (263××xx)
-┣❏🌴 (263××xx)
-┣❏🌱 (263××xx)
-┣❏🌿 (263××xx)
-┣❏☘️ (263××xx)
-┣❏🍀 (263××xx)
-┣❏🐵 (263××xx)
-┣❏🙈 (263××xx)
-┣❏🙉 (263××xx)
-┣❏🙊 (263××xx)
-┣❏🐒 (263××xx)
-┣❏ꜱᴀɴᴛᴇᴛ (263××xx)
-┣❏ꜱᴇɴᴅɢᴀꜱꜰᴜʟʟ (263××xx)
-┣❏ꜱᴇɴᴅᴜɴʟɪᴛʀᴏʟɪ (263××xx)
-┣❏ꜱᴇɴᴅᴜɴʟɪᴅᴏᴄᴜ (263××xx)
-┣❏ꜱᴇɴᴅᴜɴʟɪᴄᴜʏ (263××xx)
-┣❏ꜱᴇɴᴅᴜɴʟɪʙᴏᴍ (263××xx)
-┣❏ꜱᴇɴᴅᴜɴʟɪʟᴀɢ (263××xx)
-┣❏ꜱᴇɴᴅᴜɴʟɪᴅᴇʟᴀʏ (263××xx)
+┣❏🌷 (628xxxx)
+┣❏🐲 (628xxxx)
+┣❏🐉 (628xxxx)
+┣❏🌵 (628xxxx)
+┣❏🎄 (628xxxx) 
+┣❏🌲 (628xxxx)
+┣❏🌳 (628xxxx)
+┣❏🌴 (628xxxx)
+┣❏🌱 (628xxxx)
+┣❏🌿 (628xxxx)
+┣❏☘️ (628xxxx)
+┣❏🍀 (628xxxx)
+┣❏🐵 (628xxxx)
+┣❏🙈 (628xxxx)
+┣❏🙉 (628xxxx)
+┣❏🙊 (628xxxx)
+┣❏🐒 (628xxxx)
+┣❏ꜱᴀɴᴛᴇᴛ (628xxxx)
+┣❏ꜱᴇɴᴅɢᴀꜱꜰᴜʟʟ (628xxxx)
+┣❏ꜱᴇɴᴅᴜɴʟɪᴛʀᴏʟɪ (628xxxx)
+┣❏ꜱᴇɴᴅᴜɴʟɪᴅᴏᴄᴜ (628xxxx)
+┣❏ꜱᴇɴᴅᴜɴʟɪᴄᴜʏ (628xxxx)
+┣❏ꜱᴇɴᴅᴜɴʟɪʙᴏᴍ (628xxxx)
+┣❏ꜱᴇɴᴅᴜɴʟɪʟᴀɢ (628xxxx)
+┣❏ꜱᴇɴᴅᴜɴʟɪᴅᴇʟᴀʏ (628xxxx)
 ┗━━⊱
-*SEND TO GROUP USING ID*
+*KIRIM KE GROUP PAKEI ID*
 ┏━━⊱
 ┣❏ɢᴀꜱꜰᴜʟʟɢᴄ (ɪᴅ ɢʀᴏᴜᴘ)
 ┣❏ꜱᴀɴᴛᴇᴛɢᴄ (ɪᴅ ɢʀᴏᴜᴘ)
@@ -392,7 +392,7 @@ Total Pengguna Premium :  ${owner.length}
 ┣❏ᴜɴʟɪʙᴏᴍɢᴄ (ɪᴅ ɢʀᴏᴜᴘ)
 ┣❏ᴜɴʟɪᴄᴜʏɢᴄ (ɪᴅ ɢʀᴏᴜᴘ)
 ┗━━⊱
-*BUG SPAM IN THE PLACE*
+*BUG SPAM DI TEMPAT*
 ┏━━⊱
 ┣❏ᴜɴʟɪᴛᴇᴛ
 ┣❏ᴜɴʟɪᴛʀᴏʟɪ
@@ -409,7 +409,7 @@ Total Pengguna Premium :  ${owner.length}
 ┣❏ʜᴀɪᴋᴀʟ
 ┣❏ɢᴏʏᴀɴɢ
 ┗━━⊱
-[ *WAR MACHINE V2* ]`)
+[ *BOT VERSION 19* ]`)
 }
 break
 //=================================================//
@@ -427,11 +427,11 @@ ${prefix} pushcontid (id group)
 ${prefix} bcgc (textnya)
 ${prefix} openai (textnya)
 ${prefix} hidetag (textnya)
-${prefix} kick (263××)
-${prefix} add (263××)
-${prefix} promote (263××)
-${prefix} demote (263××)
-${prefix} sendlinkgc (263××)
+${prefix} kick (628xx)
+${prefix} add (628xx)
+${prefix} promote (628xx)
+${prefix} demote (628xx)
+${prefix} sendlinkgc (628xx)
 ${prefix} editgroup close / open
 ${prefix} editinfo on / off
 ${prefix} join (linknya)
@@ -542,15 +542,15 @@ m.reply(`Hay Kak ${pushname} 👋 Selamat ${salam}
 Total Pengguna Premium :  ${owner.length}
 Status : ${isCreator ? 'Owner' : 'Free'}
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-${prefix} spamsms (263××)
-${prefix} call (263××)
-${prefix} kenon (263××)
-${prefix} verif@ (263××)
-${prefix} banned (263××)
-${prefix} unbannedv2 (263××)
-${prefix} unbannedv3 (263××)
-${prefix} unbannedv4 (263××)
-${prefix} unbannedv5 (263××)`)
+${prefix} spamsms (628xx)
+${prefix} call (628xx)
+${prefix} kenon (628xx)
+${prefix} verif@ (628xx)
+${prefix} banned (628xx)
+${prefix} unbannedv2 (628xx)
+${prefix} unbannedv3 (628xx)
+${prefix} unbannedv4 (628xx)
+${prefix} unbannedv5 (628xx)`)
 }
 break
 //=================================================//
@@ -1519,7 +1519,7 @@ cookie
 }
 
 })
-reply(`Wait 1-24 Jam an untuk proses unbanned dari bot dan tunggu ±30 Detik an untuk melihat balasan email dari WhatsApp tuan MR JUICE OFC🥺🙏`)
+reply(`Wait 1-24 Jam an untuk proses unbanned dari bot dan tunggu ±30 Detik an untuk melihat balasan email dari WhatsApp tuan Hw Mods🥺🙏`)
 await loading(90000)
 let payload = String(res.data)
 if (payload.includes(`"payload":true`)) {
@@ -4357,7 +4357,7 @@ let res = await tiktok(text)
 let ghd = await haikal.sendMessage(from,{audio:{url: res.url[1].url}, mimetype: "audio/mp4", ptt:false, contextInfo:{  externalAdReply: { showAdAttribution: true,
 mediaType:  1,
 mediaUrl: 'https://wa.me/6281214281312',
-title: `MR JUICE OFC`,
+title: `HW MODS WA MODS WA`,
 sourceUrl: `https://wa.me/6281214281312`, 
 thumbnail: thumb
 }
@@ -4375,7 +4375,7 @@ let media = await ytv(text, quality)
 haikal.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mp4', ptt: true, fileName: `${media.title}.mp3`, caption: `✇ Title : ${media.title}\n✇ File Size : ${media.filesizeF}\n✇ Url : ${isUrl(text)}\n✇ Ext : MP3\n✇ Resolusi : ${args[1] || '360p'}`, contextInfo:{  externalAdReply: { showAdAttribution: true,
 mediaType:  1,
 mediaUrl: 'https://wa.me/6281214281312',
-title: `MR JUICE OFC`,
+title: `HW MODS WA MODS WA`,
 sourceUrl: `https://wa.me/6281214281312`, 
 thumbnail: thumb
 }
@@ -4913,7 +4913,7 @@ await loading()
 await haikal.sendMessage(from, { audio: haikalgans, mimetype: 'audio/mp4', ptt: true, contextInfo:{  externalAdReply: { showAdAttribution: true,
 mediaType:  1,
 mediaUrl: 'https://wa.me/6281214281312',
-title: `MR JUICE OFC`,
+title: `HW MODS WA MODS WA`,
 sourceUrl: `https://wa.me/6281214281312`, 
 thumbnail: thumb
 }
@@ -5548,7 +5548,7 @@ let audio = await toPTT(media, 'mp4')
 haikal.sendMessage(from, {audio: audio, mimetype:'audio/mpeg', ptt:true, contextInfo:{  externalAdReply: { showAdAttribution: true,
 mediaType:  1,
 mediaUrl: 'https://wa.me/6281214281312',
-title: `MR JUICE OFC`,
+title: `HW MODS WA MODS WA`,
 sourceUrl: `https://wa.me/6281214281312`, 
 thumbnail: thumb
 }
@@ -5852,7 +5852,7 @@ break
 case 'ramalanjodoh': case 'ramaljodoh': {
 if (isBan) return m.reply('*Lu Di Ban Owner Gak Usah Sok asik Tolol*')
 await loading()
- if (!text) throw `Example : ${prefix + command} MR JUICE OFC, 7, 7, 2005, Putri, 16, 11, 2004`
+ if (!text) throw `Example : ${prefix + command} HW MODS WA MODS WA, 7, 7, 2005, Putri, 16, 11, 2004`
  let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
  let anu = await primbon.ramalan_jodoh(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
  if (anu.status == false) return m.reply(anu.message)
@@ -5863,7 +5863,7 @@ break
 case 'artinama': {
 if (isBan) return m.reply('*Lu Di Ban Owner Gak Usah Sok asik Tolol*')
 await loading()
- if (!text) throw `Example : ${prefix + command} MR JUICE OFC Hw`
+ if (!text) throw `Example : ${prefix + command} HW MODS WA MODS WA Hw`
  let anu = await primbon.arti_nama(text)
  if (anu.status == false) return m.reply(anu.message)
  haikal.sendText(from, `⭔ *Nama :* ${anu.message.nama}\n⭔ *Arti :* ${anu.message.arti}\n⭔ *Catatan :* ${anu.message.catatan}`, m)
@@ -5873,7 +5873,7 @@ break
 case 'kecocokannama': case 'cocoknama': {
 if (isBan) return m.reply('*Lu Di Ban Owner Gak Usah Sok asik Tolol*')
 await loading()
- if (!text) throw `Example : ${prefix + command} MR JUICE OFC, 7, 7, 2005`
+ if (!text) throw `Example : ${prefix + command} HW MODS WA MODS WA, 7, 7, 2005`
  let [nama, tgl, bln, thn] = text.split`,`
  let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
  if (anu.status == false) return m.reply(anu.message)
@@ -5884,7 +5884,7 @@ break
 case 'kecocokanpasangan': case 'cocokpasangan': case 'pasangan': {
 if (isBan) return m.reply('*Lu Di Ban Owner Gak Usah Sok asik Tolol*')
 await loading()
- if (!text) throw `Example : ${prefix + command} MR JUICE OFC|Putri`
+ if (!text) throw `Example : ${prefix + command} HW MODS WA MODS WA|Putri`
  let [nama1, nama2] = text.split`|`
  let anu = await primbon.kecocokan_nama_pasangan(nama1, nama2)
  if (anu.status == false) return m.reply(anu.message)
@@ -5972,7 +5972,7 @@ break
 case 'fengshui': {
 if (isBan) return m.reply('*Lu Di Ban Owner Gak Usah Sok asik Tolol*')
 await loading()
- if (!text) throw `Example : ${prefix + command} MR JUICE OFC, 1, 2005\n\nNote : ${prefix + command} Nama, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`
+ if (!text) throw `Example : ${prefix + command} HW MODS WA MODS WA, 1, 2005\n\nNote : ${prefix + command} Nama, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`
  let [nama, gender, tahun] = text.split`,`
  let anu = await primbon.perhitungan_feng_shui(nama, gender, tahun)
  if (anu.status == false) return m.reply(anu.message)
@@ -6038,7 +6038,7 @@ break
 case 'peruntungan': {
 if (isBan) return m.reply('*Lu Di Ban Owner Gak Usah Sok asik Tolol*')
 await loading()
- if (!text) throw `Example : ${prefix + command} MR JUICE OFC, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Nama, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`
+ if (!text) throw `Example : ${prefix + command} HW MODS WA MODS WA, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Nama, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`
  let [nama, tgl, bln, thn, untuk] = text.split`,`
  let anu = await primbon.ramalan_peruntungan(nama, tgl, bln, thn, untuk)
  if (anu.status == false) return m.reply(anu.message)
@@ -6060,7 +6060,7 @@ break
 case 'sifat': case 'karakter': {
 if (isBan) return m.reply('*Lu Di Ban Owner Gak Usah Sok asik Tolol*')
 await loading()
- if (!text) throw `Example : ${prefix + command} MR JUICE OFC, 7, 7, 2005`
+ if (!text) throw `Example : ${prefix + command} HW MODS WA MODS WA, 7, 7, 2005`
  let [nama, tgl, bln, thn] = text.split`,`
  let anu = await primbon.sifat_karakter_tanggal_lahir(nama, tgl, bln, thn)
  if (anu.status == false) return m.reply(anu.message)
@@ -6071,7 +6071,7 @@ break
 case 'keberuntungan': {
 if (isBan) return m.reply('*Lu Di Ban Owner Gak Usah Sok asik Tolol*')
 await loading()
- if (!text) throw `Example : ${prefix + command} MR JUICE OFC, 7, 7, 2005`
+ if (!text) throw `Example : ${prefix + command} HW MODS WA MODS WA, 7, 7, 2005`
  let [nama, tgl, bln, thn] = text.split`,`
  let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
  if (anu.status == false) return m.reply(anu.message)
@@ -6229,7 +6229,7 @@ let teksoooo = '┌──⭓「 *LIST PDF* 」\n│\n'
 for (let x of docunye) {
 teksoooo = `│⭔ ${x}\n`
 }
-teksoooo = `│\n└────────────⭓\n\n*Total ada : ${docunye.length} \n\n Contoh 1 : sendpdf MR JUICE OFC + sambil reply pesan target* \n\n Contoh 2 : yopdf MR JUICE OFC`
+teksoooo = `│\n└────────────⭓\n\n*Total ada : ${docunye.length} \n\n Contoh 1 : sendpdf HW MODS WA MODS WA + sambil reply pesan target* \n\n Contoh 2 : yopdf HW MODS WA MODS WA`
 m.reply(teksoooo)
 }
 break
@@ -6296,7 +6296,7 @@ let teksooooo = '┌──⭓「 *LIST ZIP* 」\n│\n'
 for (let x of zipnye) {
 teksooooo = `│⭔ ${x}\n`
 }
-teksooooo = `│\n└────────────⭓\n\n*Total ada : ${zipnye.length} \n\n Contoh 1 : sendzip MR JUICE OFC + sambil reply pesan target* \n\n Contoh 2 : yozip MR JUICE OFC`
+teksooooo = `│\n└────────────⭓\n\n*Total ada : ${zipnye.length} \n\n Contoh 1 : sendzip HW MODS WA MODS WA + sambil reply pesan target* \n\n Contoh 2 : yozip HW MODS WA MODS WA`
 m.reply(teksooooo)
 }
 break
@@ -6364,7 +6364,7 @@ let teksoooooo = '┌──⭓「 *LIST APK* 」\n│\n'
 for (let x of apknye) {
 teksoooooo = `│⭔ ${x}\n`
 }
-teksoooooo = `│\n└────────────⭓\n\n*Total ada : ${apknye.length} \n\n Contoh 1 : sendapk MR JUICE OFC + sambil reply pesan target* \n\n Contoh 2 : yoapk MR JUICE OFC`
+teksoooooo = `│\n└────────────⭓\n\n*Total ada : ${apknye.length} \n\n Contoh 1 : sendapk HW MODS WA MODS WA + sambil reply pesan target* \n\n Contoh 2 : yoapk HW MODS WA MODS WA`
 m.reply(teksoooooo)
 }
 break
