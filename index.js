@@ -114,7 +114,7 @@ Dont Forget To read group description
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Creator : https://wa.me/?`})
 } else if (anu.action == 'remove') {
-haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Karena Untuk Setiap Ucapan Selamat Datang Akan Selalu Diakhiri Dengan Ucapan Selamat Tinggal 👋
+haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Uhhhh Bro Is Gone😶 Good Bye 👋
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
 Bye *@${num.split("@")[0]}* Left The Group *${metadata.subject}*
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
