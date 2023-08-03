@@ -15,20 +15,20 @@ const twitter = require("./baseikal/download/twitter")
 global.baileys = require('@whiskeysockets/baileys') 
 global.adiwajshing = require('@adiwajshing/baileys') 
 
-global.gr = 'https://chat.whatsapp.com/IfWgGV9jV2NBEWXYZCK4NN'
-global.ig = '@faallzst_' // ubah aja
-global.email = 'faallzofficial@gmail.com' //serah
-global.region = 'indonesia' // serah
+global.gr = 'https://chat.whatsapp.com/GRuUvhCqhHK08msKMadAji'
+global.ig = '@mr_juice7' // ubah aja
+global.email = 'mrjuice017@gmail.com' //serah
+global.region = 'New York' // serah
 //—————「 Set Nama Own & Bot 」—————//
-global.ownername = 'deril offc' //ubah jadi nama mu, note tanda ' gausah di hapus!
+global.ownername = 'ᴹᴿ᭄ ᴊᴜɪᴄᴇོ ×፝֟͜×' //ubah jadi nama mu, note tanda ' gausah di hapus!
 //=================================================//
-global.owner = ['6281362459904'] // ubah aja pake nomor lu
+global.owner = ['-'] // ubah aja pake nomor lu
 //==========================BY Hw Mods=======================//
 global.keyopenai = `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`
 //====================BY Hw Mods=============================//
-global.botname = 'FallBot' //ubah jadi nama bot mu, note tanda ' gausah di hapus!
-global.packname = 'Bot Whatsapp' // ubah aja ini nama sticker
-global.author = '© FaallzBotz' // ubah aja ini nama sticker
+global.botname = 'War Machine' //ubah jadi nama bot mu, note tanda ' gausah di hapus!
+global.packname = '© BayMax Bot INC' // ubah aja ini nama sticker
+global.author = 'Mr Juice' // ubah aja ini nama sticker
 global.prefa = ['','!','.',',','🐤','🗿']
 global.sessionName = 'haikal' //Gausah Juga
 global.sp = '⭔' // Gausah Juga
