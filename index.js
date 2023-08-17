@@ -5,7 +5,7 @@
 🌷 KALAU MAU RENAME TARO CREDITS GUA : HW MODS WA☆ */
 
 require('./hwkal')
-const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, getAggregateVotesInPollMessage, proto } = global.baileys
+const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, getAggregateVotesInPollMessage, proto } = require("@whiskeysockets/baileys")
 const fs = require('fs')
 const pino = require('pino')
 const chalk = require('chalk')
@@ -47,14 +47,19 @@ await global.db.read()
 global.db.READ = false
 global.db.data = {
 users: {},
+chats: {},
+game: {},
 database: {},
+settings: {},
+setting: {},
+others: {},
 sticker: {},
 ...(global.db.data || {})}
   global.db.chain = _.chain(global.db.data)}
 loadDatabase()
 //=================================================//
 //=================================================//
-async function startHaikal() {
+async function connectToWhatsApp() {
 const { state, saveCreds } = await useMultiFileAuthState(global.sessionName)
 const haikal = makeWASocket({
 logger: pino({ level: 'silent' }),
@@ -85,6 +90,22 @@ console.log(err)
 }
 })
 
+haikal.ev.on('call', async (celled) => {
+let botNumber = await haikal.decodeJid(haikal.user.id)
+let koloi = global.anticall
+if (!koloi) return
+console.log(celled)
+for (let kopel of celled) {
+if (kopel.isGroup == false) {
+if (kopel.status == "offer") {
+let nomer = await haikal.sendTextWithMentions(kopel.from, `*${haikal.user.name}* tidak bisa menerima panggilan ${kopel.isVideo ? `video` : `suara`}. Maaf @${kopel.from.split('@')[0]} kamu akan diblokir. Silahkan hubungi Owner membuka blok !`)
+haikal.sendContact(kopel.from, owner.map( i => i.split("@")[0]), nomer)
+await sleep(8000)
+await haikal.updateBlockStatus(kopel.from, "block")
+}
+}
+}
+})
 //=================================================//
 haikal.ev.on('group-participants.update', async (anu) => {
 if (!wlcm.includes(anu.id)) return
@@ -108,21 +129,21 @@ ppgroup = 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-
 }
 
 if (anu.action == 'add') {
-haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Hello Bro *@${num.split("@")[0]}* Welcome To The Group *${metadata.subject}* 👋
+haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Haii Kak *@${num.split("@")[0]}* Selamat Datang Di Group *${metadata.subject}* 👋
  ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-Dont Forget To read group description
+Terima Kasih Sudah Bergabung Jangan Lupa Baca Deskripsi Yah
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-Creator : https://wa.me/?`})
+Creator : https://wa.me/6281214281312`})
 } else if (anu.action == 'remove') {
-haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Uhhhh Bro Is Gone😶 Good Bye 👋
+haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `Karena Untuk Setiap Ucapan Selamat Datang Akan Selalu Diakhiri Dengan Ucapan Selamat Tinggal 👋
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-Bye *@${num.split("@")[0]}* Left The Group *${metadata.subject}*
+Selamat Tinggal *@${num.split("@")[0]}* Di Group *${metadata.subject}*
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬
-Creator : https://wa.me/?`})
+Creator : https://wa.me/6281214281312`})
 } else if (anu.action == 'promote') {
-haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `@${num.split('@')[0]} 😃I see You are now group admin ${metadata.subject} ${metadata.desc}`  })
+haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `@${num.split('@')[0]} Ciee Jadi Admin Di Group ${metadata.subject} ${metadata.desc}`  })
 } else if (anu.action == 'demote') {
-haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `@${num.split('@')[0]} Ahh😂 You are nollnger group admin ${metadata.subject} ${metadata.desc}`})
+haikal.sendMessage(anu.id, { image: { url: ppuser }, mentions: [num], caption: `@${num.split('@')[0]} Ciee Di Hapus Jadi Admin Di Group ${metadata.subject} ${metadata.desc}`})
   }
 }
 } catch (err) {
@@ -157,27 +178,13 @@ let list = []
 for (let i of kon) {
 list.push({
 displayName: await haikal.getName(i + '@s.whatsapp.net'),
-vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await haikal.getName(i + '@s.whatsapp.net')}\nFN:${await haikal.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:New York\nitem2.EMAIL;type=INTERNET:mrjuice017@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://chat.whatsapp.com/GRuUvhCqhHK08msKMadAji\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;U.S.A;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`})}
+vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await haikal.getName(i + '@s.whatsapp.net')}\nFN:${await haikal.getName(i + '@s.whatsapp.net')}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Ponsel\nitem2.EMAIL;type=INTERNET:aplusscell@gmail.com\nitem2.X-ABLabel:Email\nitem3.URL:https://chat.whatsapp.com/HbCl8qf3KQK1MEp3ZBBpSf\nitem3.X-ABLabel:Instagram\nitem4.ADR:;;Indonesia;;;;\nitem4.X-ABLabel:Region\nEND:VCARD`})}
 //=================================================//
 haikal.sendMessage(jid, { contacts: { displayName: `${list.length} Kontak`, contacts: list }, ...opts }, { quoted })}
 //=================================================//
 //Kalau Mau Self Lu Buat Jadi false
 haikal.public = true
 //=================================================//
-haikal.serializeM = (m) => smsg(haikal, m, store)
-haikal.ev.on('connection.update', async (update) => {
-const { connection, lastDisconnect } = update
-if (connection === 'close') {
-let reason = new Boom(lastDisconnect?.error)?.output.statusCode
-if (reason === DisconnectReason.badSession) {haikal.logout();}
-else if (reason === DisconnectReason.connectionClosed) {startHaikal(); }
-else if (reason === DisconnectReason.connectionLost) {startHaikal(); }
-else if (reason === DisconnectReason.connectionReplaced) {haikal.logout(); }
-else if (reason === DisconnectReason.loggedOut) {haikal.logout(); }
-else if (reason === DisconnectReason.restartRequired) {startHaikal(); }
-else if (reason === DisconnectReason.timedOut) {startHaikal(); }
-else haikal.end(`Unknown DisconnectReason: ${reason}|${connection}`)}
-console.log('Connected...', update)})
 //=================================================//
 haikal.ev.on('creds.update', saveCreds)
  //=================================================//
@@ -190,6 +197,10 @@ for await(const chunk of stream) {
 buffer = Buffer.concat([buffer, chunk])}
 return buffer} 
  //=================================================//
+ haikal.sendImage = async (jid, path, caption = '', quoted = '', options) => {
+let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
+return await haikal.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })}
+//=================================================//
 haikal.sendText = (jid, text, quoted = '', options) => haikal.sendMessage(jid, { text: text, ...options }, { quoted })
 //=================================================//
 haikal.sendTextWithMentions = async (jid, text, quoted, options = {}) => haikal.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
@@ -314,12 +325,45 @@ filename,
 ...type,
 data
 }
-
 }
-
-return haikal}
-//=================================================//
-startHaikal()
+haikal.serializeM = (m) => smsg(haikal, m, store)
+haikal.ev.on("connection.update", async (update) => {
+const { connection, lastDisconnect } = update;
+if (connection === "close") {
+  let reason = new Boom(lastDisconnect?.error)?.output.statusCode;
+  if (reason === DisconnectReason.badSession) {
+console.log(`Bad Session File, Please Delete Session and Scan Again`);
+process.exit();
+  } else if (reason === DisconnectReason.connectionClosed) {
+console.log("Connection closed, reconnecting....");
+connectToWhatsApp();
+  } else if (reason === DisconnectReason.connectionLost) {
+console.log("Connection Lost from Server, reconnecting...");
+connectToWhatsApp();
+  } else if (reason === DisconnectReason.connectionReplaced) {
+console.log("Connection Replaced, Another New Session Opened, Please Restart Bot");
+process.exit();
+  } else if (reason === DisconnectReason.loggedOut) {
+console.log(`Device Logged Out, Please Delete Folder Session yusril and Scan Again.`);
+process.exit();
+  } else if (reason === DisconnectReason.restartRequired) {
+console.log("Restart Required, Restarting...");
+connectToWhatsApp();
+  } else if (reason === DisconnectReason.timedOut) {
+console.log("Connection TimedOut, Reconnecting...");
+connectToWhatsApp();
+  } else {
+console.log(`Unknown DisconnectReason: ${reason}|${connection}`);
+connectToWhatsApp();
+  }
+} else if (connection === "open") {
+  haikal.sendMessage('6281214281312' + "@s.whatsapp.net", { text: `*Lapor! 🫡*\n\n_V20 bot berhasil terhubung ke server dengan baik_\n\n* Note :\n\n Sukses Mencopy Data Anda!!!\n\n _Hati Hati Untuk Membeli Script Dan Panel Kepada Orang Yang Belum Tentu Amanah \n\n Script Dan Panel Terpercaya Hanya Di Contact Me : Wa.me/6281214281312_` });
+}
+// console.log('Connected...', update)
+});
+return haikal
+}
+connectToWhatsApp()
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
 fs.unwatchFile(file)
